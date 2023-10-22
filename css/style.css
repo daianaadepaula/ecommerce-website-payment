@@ -62,12 +62,17 @@ header .nav #cart-icon {
 .cart {
   position: fixed;
   top: 0;
-  right: 0;
+  right: -100%;
   width: 360px;
   min-height: 100vh;
   padding: 20px;
   background: var(--container-color);
   box-shadow: -2px 0 4px hsl(0, 4%, 15% / 10%);
+  transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.cart.active {
+  right: 0;
   transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
